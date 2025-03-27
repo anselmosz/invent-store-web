@@ -62,12 +62,12 @@
         <form action="" class="produto-form">
           <div class="form-group">
             <label for="nome">Nome do Produto <span class="campo-obrigatorio">*</span></label>
-            <input type="text" id="nome" placeholder="Digite o nome do produto">
+            <input type="text" id="nome" placeholder="Digite o nome do produto" required>
             <span class="erro-msg" id="erro-nome">Este campo é obrigatório!</span>
           </div>
           <div class="form-group">
             <label for="categoria">Categoria <span class="campo-obrigatorio">*</span></label>
-            <select id="categoria">
+            <select id="categoria" required>
               <option value="">Selecione uma categoria</option>
               <option value="Eletronicos">Eletronicos</option>
               <option value="Moveis">Moveis</option>
@@ -80,12 +80,12 @@
           <div class="form-row">
             <div class="form-group">
               <label for="preco">Preço (R$) <span class="campo-obrigatorio">*</span></label>
-              <input type="number" id="preco" min="0" step="0.01" placeholder="0,00">
+              <input type="number" id="preco" min="0" step="0.01" placeholder="0,00" required>
               <span class="erro-msg" id="erro-nome">Este campo é obrigatório!</span>
             </div>
             <div class="form-group">
               <label for="quantidade">Quantidade <span class="campo-obrigatorio">*</span></label>
-              <input type="number" id="quantidade" min="0" step="1" placeholder="0">
+              <input type="number" id="quantidade" min="0" step="1" placeholder="0" required>
               <span class="erro-msg" id="erro-nome">Este campo é obrigatório!</span>
             </div>
           </div>
