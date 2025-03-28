@@ -28,7 +28,7 @@ header {
 .logo img {
   width: 50px;
   height: 50px;
-  margin-left: 1rem; 
+  margin-right: 1rem; 
 }
 .logo h1 {
   font-weight: 700;
@@ -43,7 +43,7 @@ header {
 
 /** Estilização da Main */
 main {
-  max-width: 1280px;
+  max-width: 98%;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -96,3 +96,7 @@ main {
   font-weight: 700;
 }
 /* Fim da estilização do Dashboard */
+
+/** Estilização do formulário de adição de item */
+
+/* Fim da estilização do formulário */
