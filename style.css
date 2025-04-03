@@ -96,3 +96,15 @@ main {
   font-weight: 700;
 }
 /* Fim da estilização do Dashboard */
+
+/** Estilização do formulário */
+.formulario-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+  overflow: hidden;
+}
