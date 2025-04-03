@@ -180,4 +180,15 @@ input:focus, select:focus {
 }
 /* Fim da estilização do formulário */
 
-/** aaaaa */
+/** Estilização da mensagem de erro e campos obrigatórios */
+.campo-obrigatorio {
+  color: #ef476f;
+  margin-left: 3px;
+}
+.erro-msg {
+  color: #ef476f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+/* Fim da estilização da mensagem de erro e campos obrigatórios */
