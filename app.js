@@ -5,7 +5,11 @@ const quantidade = document.getElementById("quantidade");
 const imagem = document.getElementById("imagem");
 const produtoForm = document.getElementById("produto-form");
 
+const notificacao = document.getElementById("notificacao");
+notificacao.style.display = 'none';
+
 const produtos = [];
+
 
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -40,6 +44,7 @@ produtoForm.addEventListener("submit", (event) => {
   }
 
   if (camposPreenchidos == false){
+    notificacao.style.display = 'none';
     return;
   }
 
@@ -50,8 +55,18 @@ produtoForm.addEventListener("submit", (event) => {
     quantidade : quantidade.value,
     imagem : imagem.value
   }
-
   produtos.push(produtoInserido);
+  
+  nome.value = "";
+  categoria.value = "";
+  preco.value = "";
+  quantidade.value = "";
+  imagem.value = "";
 
   localStorage.setItem("produtoInfo", JSON.stringify(produtos));
+
+  notificacao.style.display = 'flex';
+  notificacao.style.margin = '1rem';
+  notificacao.style.justifyContent = 'center';
+  notificacao.style.alignItems = 'center';
 });
