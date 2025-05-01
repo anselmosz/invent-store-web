@@ -13,6 +13,7 @@ const produtos = [];
 
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
   let camposPreenchidos = true
 
   if (nome.value == "") {
@@ -66,7 +67,7 @@ produtoForm.addEventListener("submit", (event) => {
   localStorage.setItem("produtoInfo", JSON.stringify(produtos));
 
   notificacao.style.display = 'flex';
-  notificacao.style.margin = '1rem';
   notificacao.style.justifyContent = 'center';
   notificacao.style.alignItems = 'center';
+  notificacao.style.margin = '1rem';
 });
