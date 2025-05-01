@@ -3,15 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --color1: #FFF;
-  --color2: #dee2e6;
+  --color1: #f8f9fa;
+  --color2: #d2d5d8;
   --color3: #2b2d42;
   --color4: #4361ee;
   --color5: #4cc9f0;
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: var(--color1);
   color: var(--color3);
   line-height: 1.6;
 }
