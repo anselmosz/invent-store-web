@@ -69,7 +69,7 @@ produtoForm.addEventListener("submit", (event) => {
   }
   
   if (camposPreenchidos == false){
-    exibirNotificacao("erro ao inserir o produto","erro");
+    exibirNotificacao("Falha ao inserir o produto","erro");
     return;
   }
   
