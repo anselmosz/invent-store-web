@@ -11,6 +11,14 @@ notificacao.style.display = 'none';
 
 const produtos = [];
 
+function validarValoresInseridos(campo) {
+  let camposPreenchidos = true
+
+  if (campo.value == "") {
+    
+  }
+}
+
 function exibirNotificacao(mensagem, status) {
   const messageEl = document.getElementById("notificacao-msg");
   
