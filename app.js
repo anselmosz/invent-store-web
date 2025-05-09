@@ -10,6 +10,9 @@ notificacao.style.display = 'none';
 
 const produtos = [];
 
+function exibirNotificacao() {
+  
+}
 
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -58,16 +61,7 @@ produtoForm.addEventListener("submit", (event) => {
   }
   produtos.push(produtoInserido);
   
-  nome.value = "";
-  categoria.value = "";
-  preco.value = "";
-  quantidade.value = "";
-  imagem.value = "";
-
   localStorage.setItem("produtoInfo", JSON.stringify(produtos));
-
-  notificacao.style.display = 'flex';
-  notificacao.style.justifyContent = 'center';
-  notificacao.style.alignItems = 'center';
-  notificacao.style.margin = '1rem';
+  
+  produtoForm.reset();
 });
