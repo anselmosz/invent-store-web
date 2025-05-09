@@ -197,3 +197,17 @@ input:focus, select:focus {
   display: none;
 }
 /* Fim da estilização da mensagem de erro e campos obrigatórios */
+
+/** Estilo da notificação */
+.notificacao-content {
+  text-align: center;
+  border-radius: 20px;
+  padding: 7px 10px;
+}
+
+#notificacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
