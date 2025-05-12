@@ -6,23 +6,15 @@ const imagem = document.getElementById("imagem");
 const produtoForm = document.getElementById("produto-form");
 
 const notificacao = document.getElementById("notificacao-content");
-
 notificacao.style.display = 'none';
 
 const produtos = [];
 
-function validarValoresInseridos(campo) {
-  let camposPreenchidos = true
-
-  if (campo.value == "") {
-    
-  }
-}
-
+// Função para exibição de notificação
 function exibirNotificacao(mensagem, status) {
   const messageEl = document.getElementById("notificacao-msg");
   
-  // o textConte é responsável por alterar o texto guardado na variável
+  // o textContent é responsável por alterar o texto guardado na variável
   messageEl.textContent = mensagem;
   
   if (status === "sucesso") {
@@ -43,56 +35,42 @@ function exibirNotificacao(mensagem, status) {
   }, 2000);
 }
 
+// Função para validar se os campos contém conteúdo ou não
+function validarCampos(campo, errorId) {
+  if (campo.value == "") {
+    document.getElementById(errorId).style.display = 'block';
+  }
+}
+
+// Evento de submissão de dados do formulário
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  let camposPreenchidos = true
+  let camposPreenchidos = true;
   
-  if (nome.value == "") {
-    document.getElementById("erro-nome").style.display = 'block';
-    camposPreenchidos = false;
-  } else {
-    document.getElementById("erro-nome").style.display = 'none';
-  }
+  validarCampos(nome, "erro-nome", camposPreenchidos);
+  // validarCampos(categoria, "erro-categoria");
+  // validarCampos(preco, "erro-preco");
+  // validarCampos(quantidade, "erro-quantidade");
   
-  if (categoria.value == "") {
-    document.getElementById("erro-categoria").style.display = 'block';
-    camposPreenchidos = false;
-  } else {
-    document.getElementById("erro-categoria").style.display = 'none';
-  }
-  
-  if (preco.value == "") {
-    document.getElementById("erro-preco").style.display = 'block';
-    camposPreenchidos = false;
-  } else {
-    document.getElementById("erro-preco").style.display = 'none';
-  }
-  
-  if (quantidade.value == "") {
-    document.getElementById("erro-quantidade").style.display = 'block';
-    camposPreenchidos = false;
-  } else {
-    document.getElementById("erro-quantidade").style.display = 'none';
-  }
-  
-  if (camposPreenchidos == false){
+  if (camposPreenchidos == false) {
     exibirNotificacao("Falha ao inserir o produto","erro");
     return;
   }
-  
+
   const produtoInserido = {
-    nome : nome.value,
-    categoria : categoria.value,
-    preco : preco.value,
-    quantidade : quantidade.value,
-    imagem : imagem.value
+  nome : nome.value,
+  categoria : categoria.value,
+  preco : preco.value,
+  quantidade : quantidade.value,
+  imagem : imagem.value
   }
+
   produtos.push(produtoInserido);
-  
+
   localStorage.setItem("produtoInfo", JSON.stringify(produtos));
 
-  exibirNotificacao("Produto inserido com sucesso!","sucesso");
-  
+  exibirNotificacao("Produto cadastrado com sucesso!","sucesso")
+
   produtoForm.reset();
 });
