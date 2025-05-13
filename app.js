@@ -93,11 +93,11 @@ function adicionarNaTabela() {
     console.log(produto);
     tbValores += `
       <tr>
+        <td></td>
         <td>${produto.nome}</td>
         <td>${produto.categoria}</td>
         <td>${produto.preco}</td>
         <td>${produto.quantidade}</td>
-        <td></td>
       </tr>
     `;
   });
