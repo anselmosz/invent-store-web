@@ -46,37 +46,37 @@ function verificarCampos() {
   let camposPreenchidos = true;
 
 if (nome.value == "") {
-  document.getElementById("nome-erro").style.display = 'block';
+  document.getElementById("erro-nome").style.display = 'block';
   camposPreenchidos = false;
 } else {
-  document.getElementById("nome-erro").style.display = 'none';
+  document.getElementById("erro-nome").style.display = 'none';
   qtdCampos += 1;
 }
 
 if (categoria.value == "") {
-  document.getElementById("categoria-erro").style.display = 'block';
+  document.getElementById("erro-categoria").style.display = 'block';
   camposPreenchidos = false;
 } else {
-  document.getElementById("categoria-erro").style.display = 'none';
+  document.getElementById("erro-categoria").style.display = 'none';
   qtdCampos += 1;
 }
 
-if (nome.value == "") {
-  document.getElementById("preco-erro").style.display = 'block';
+if (preco.value == "" || preco.value <= 0) {
+  document.getElementById("erro-preco").style.display = 'block';
   camposPreenchidos = false;
 } else {
-  document.getElementById("preco-erro").style.display = 'none';
+  document.getElementById("erro-preco").style.display = 'none';
   qtdCampos += 1;
 }
 
-if (nome.value == "") {
-  document.getElementById("quantidade-erro").style.display = 'block';
+if (quantidade.value == "" || quantidade.value <= 0) {
+  document.getElementById("erro-quantidade").style.display = 'block';
   camposPreenchidos = false;
 } else {
-  document.getElementById("quantidade-erro").style.display = 'none';
+  document.getElementById("erro-quantidade").style.display = 'none';
   qtdCampos += 1;
 }
-
+  console.log(qtdCampos);
   return camposPreenchidos;
 }
 
