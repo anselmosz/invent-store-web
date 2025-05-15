@@ -8,24 +8,17 @@ const produtoForm = document.getElementById("produto-form");
 const tbody = document.getElementById("produtos-lista");
 
 const notificacao = document.getElementById("notificacao-content");
+
 notificacao.style.display = 'none';
 
 const produtos = [];
 
-<<<<<<< HEAD
-// Função para exibição de notificação
-function exibirNotificacao(mensagem, status) {
-  const messageEl = document.getElementById("notificacao-msg");
-  
-  // o textContent é responsável por alterar o texto guardado na variável
-=======
 function exibirNotificacao(mensagem, status) {
   const messageEl = document.getElementById("notificacao-msg");
   
   let counter = 0;
 
   // o textConte é responsável por alterar o texto guardado na variável
->>>>>>> b07d062a7d7096a7ae3137d24f91672fb18af4b1
   messageEl.textContent = mensagem;
   
   if (status === "sucesso") {
@@ -115,28 +108,8 @@ function adicionarNaTabela() {
   tbody.innerHTML = tbValores;
 }
 
-// Função para validar se os campos contém conteúdo ou não
-function validarCampos(campo, errorId) {
-  if (campo.value == "") {
-    document.getElementById(errorId).style.display = 'block';
-  }
-}
-
-// Evento de submissão de dados do formulário
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
-<<<<<<< HEAD
-
-  let camposPreenchidos = true;
-  
-  validarCampos(nome, "erro-nome", camposPreenchidos);
-  // validarCampos(categoria, "erro-categoria");
-  // validarCampos(preco, "erro-preco");
-  // validarCampos(quantidade, "erro-quantidade");
-  
-  if (camposPreenchidos == false) {
-    exibirNotificacao("Falha ao inserir o produto","erro");
-=======
   
   // verificarCampos();
   if (verificarCampos() == false && qtdCampos == 0) {
@@ -144,26 +117,16 @@ produtoForm.addEventListener("submit", (event) => {
     return;
   } else if (verificarCampos() == false && qtdCampos < 4) {
     exibirNotificacao("Faltam alguns campos a serem preenchidos","alerta")
->>>>>>> b07d062a7d7096a7ae3137d24f91672fb18af4b1
     return;
   }
 
   const produtoInserido = {
-  nome : nome.value,
-  categoria : categoria.value,
-  preco : preco.value,
-  quantidade : quantidade.value,
-  imagem : imagem.value
+    nome : nome.value,
+    categoria : categoria.value,
+    preco : preco.value,
+    quantidade : quantidade.value,
+    imagem : imagem.value
   }
-<<<<<<< HEAD
-
-  produtos.push(produtoInserido);
-
-  localStorage.setItem("produtoInfo", JSON.stringify(produtos));
-
-  exibirNotificacao("Produto cadastrado com sucesso!","sucesso")
-
-=======
   
   let produtosSalvos = JSON.parse(localStorage.getItem("produtoInfo")) || [];
   
@@ -171,7 +134,6 @@ produtoForm.addEventListener("submit", (event) => {
   
   localStorage.setItem("produtoInfo", JSON.stringify(produtosSalvos));
   
->>>>>>> b07d062a7d7096a7ae3137d24f91672fb18af4b1
   produtoForm.reset();
 
   exibirNotificacao("Produto inserido com sucesso!","sucesso");
