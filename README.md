@@ -36,6 +36,7 @@ O projeto atualmente conta com as seguintes tecnologias:
 - CSS
 - Javascript
 
+<!--
 ## 📫 Contribuição para o Invent Store
 Para contribuir com o projeto, siga estas etapas:
 
@@ -47,7 +48,7 @@ Para contribuir com o projeto, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-<!-- ## 💡 Funcionalidades do projeto
+## 💡 Funcionalidades do projeto
 As principais funcionalidades do projeto até o momento são:
 - **Validação de campos:** Verifica se os campos para adicionar os dados do produto estão vazios
 - **Notificações personalizadas:** Assim que o usuário clica no botão de adicionar o produto, é retornada uma notificação de acordo com o estado de preenchimento dos campos.
