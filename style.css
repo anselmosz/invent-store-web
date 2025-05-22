@@ -96,7 +96,7 @@ main {
   margin-bottom: 0.5rem;
   color: var(--color3);
 }
-.card .info p {
+.card .info span {
   font-size: 1.7rem;
   font-weight: 700;
 }

@@ -5,6 +5,11 @@ const quantidade = document.getElementById("quantidade");
 const imagem = document.getElementById("imagem");
 const produtoForm = document.getElementById("produto-form");
 
+const estoqueBaixo = document.getElementById("estoque-baixo-card");
+const totalProdutos = document.getElementById("total-produtos");
+const totalEstoque = document.getElementById("total-itens");
+const valorTotal = document.getElementById("valor-total");
+
 const tbody = document.getElementById("produtos-lista");
 
 const notificacao = document.getElementById("notificacao-content");
@@ -13,10 +18,46 @@ notificacao.style.display = 'none';
 
 const produtos = [];
 
+// Função para mudar os dados do dashboard
+function adicionarDadosAoDashboard() {
+  // Verifica se há produtos no estoque, caso não haja, é mostrado o card de estoque baixo
+
+  let produtos = JSON.parse(localStorage.getItem("produtoInfo")) || [];
+
+  let produtosCounter = 0;
+  let qtdCounter = 0;
+  let valorMultProduto = 0;
+  let valorFinal = 0;
+
+  if (produtos.length > 0) {
+    estoqueBaixo.style.display = 'none';
+  }
+
+  // loop para adicionar valor aos cards do dashboard a medida que os produtos são cadastrados
+  produtos.forEach(produto => {
+    // A medida que os produtos são adicionados, o contador adiciona 1 por produto cadastrado
+    produtosCounter += 1;     
+    totalProdutos.textContent = produtosCounter; // Adiciona a quantidade de tipos de produtos cadastrados
+
+    // transforma em Int o dado de quantidade do objeto
+    qtdCounter += parseInt(produto.quantidade);
+    totalEstoque.textContent = qtdCounter; // Adiciona a quantidade total de todos os produtos cadastrados
+
+    // transforma em Float o dado de preço do objeto
+
+    // multiplica o valor de preço pela quantidade, para retornar o valor total do estoque
+    valorMultProduto = parseFloat(produto.preco) * parseInt(produto.quantidade);
+
+    valorFinal += parseFloat(valorMultProduto);
+    
+    // adiciona o valor total do estoque (pega o preço dos itens, os multiplica pela sua quantidade e adiciona ao campo)
+    valorTotal.textContent = `R$ ${valorFinal}`;
+  });
+}
+
+// Função para exibir notificações acima do dashboard
 function exibirNotificacao(mensagem, status) {
   const messageEl = document.getElementById("notificacao-msg");
-  
-  let counter = 0;
 
   // o textConte é responsável por alterar o texto guardado na variável
   messageEl.textContent = mensagem;
@@ -39,47 +80,51 @@ function exibirNotificacao(mensagem, status) {
   }, 5000);
 }
 
-let qtdCampos = 0;
+let qtdCampos = 0; // contador dos campos (é usado na função abaixo para contabilizar a quantidade de campos preenchidos)
 
+// Funcão para validar se os campos de cadastro do formulário de produtos estão vazios
 function verificarCampos() {
   qtdCampos = 0;
   let camposPreenchidos = true;
 
-if (nome.value == "") {
-  document.getElementById("erro-nome").style.display = 'block';
-  camposPreenchidos = false;
-} else {
-  document.getElementById("erro-nome").style.display = 'none';
-  qtdCampos += 1;
-}
+  if (nome.value == "") {
+    document.getElementById("erro-nome").style.display = 'block';
+    camposPreenchidos = false;
+  } else {
+    document.getElementById("erro-nome").style.display = 'none';
+    qtdCampos += 1;
+  }
 
-if (categoria.value == "") {
-  document.getElementById("erro-categoria").style.display = 'block';
-  camposPreenchidos = false;
-} else {
-  document.getElementById("erro-categoria").style.display = 'none';
-  qtdCampos += 1;
-}
+  if (categoria.value == "") {
+    document.getElementById("erro-categoria").style.display = 'block';
+    camposPreenchidos = false;
+  } else {
+    document.getElementById("erro-categoria").style.display = 'none';
+    qtdCampos += 1;
+  }
 
-if (preco.value == "" || preco.value <= 0) {
-  document.getElementById("erro-preco").style.display = 'block';
-  camposPreenchidos = false;
-} else {
-  document.getElementById("erro-preco").style.display = 'none';
-  qtdCampos += 1;
-}
+  if (preco.value == "" || preco.value <= 0) {
+    document.getElementById("erro-preco").style.display = 'block';
+    camposPreenchidos = false;
+  } else {
+    document.getElementById("erro-preco").style.display = 'none';
+    qtdCampos += 1;
+  }
 
-if (quantidade.value == "" || quantidade.value <= 0) {
-  document.getElementById("erro-quantidade").style.display = 'block';
-  camposPreenchidos = false;
-} else {
-  document.getElementById("erro-quantidade").style.display = 'none';
-  qtdCampos += 1;
-}
+  if (quantidade.value == "" || quantidade.value <= 0) {
+    document.getElementById("erro-quantidade").style.display = 'block';
+    camposPreenchidos = false;
+  } else {
+    document.getElementById("erro-quantidade").style.display = 'none';
+    qtdCampos += 1;
+  }
+  
   console.log(qtdCampos);
+
   return camposPreenchidos;
 }
 
+// Função para adicionar os dados de produtos cadastrados na tabela abaixo do formulário
 function adicionarNaTabela() {
   const semProdutosDiv = document.getElementById("sem-produtos");
 
@@ -108,6 +153,7 @@ function adicionarNaTabela() {
   tbody.innerHTML = tbValores;
 }
 
+// Evento de click do botão de "adicionar produto"
 produtoForm.addEventListener("submit", (event) => {
   event.preventDefault();
   
@@ -140,3 +186,5 @@ produtoForm.addEventListener("submit", (event) => {
 });
 
 adicionarNaTabela();
+
+adicionarDadosAoDashboard();
