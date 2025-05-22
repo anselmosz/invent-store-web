@@ -27,6 +27,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [ ] Adição de imagens
 - [ ] Alteração de dados nos objetos do local storage
 - [ ] Exclusão de objetos do local storage
+- [ ] Responsividade
 
 ## ⚙ Tecnologias usadas
 
