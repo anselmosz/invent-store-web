@@ -2,6 +2,8 @@
 
 Este projeto foi desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas, o principal foco do projeto é fornecer de uma forma simples um controle de estoque por meio da adição de itens em formato JSON.
 
+❗ _Para rodar o projeto, utilize a extensão Live Server do VS Code._ ❗
+
 ## 💡 Funcionalidades do projeto
 As principais funcionalidades desenvolvidas até o momento são:
 - **Validação de campos:** Verifica se os campos para adicionar os dados do produto estão vazios
