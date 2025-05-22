@@ -21,7 +21,7 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [x] Cadastro de produtos
-- [x] Validação dos campos
+- [x] Validação de conteúdo nos inputs
 - [x] Notificações
 - [x] Visualização de objetos cadastrados
 - [ ] Adição de imagens
