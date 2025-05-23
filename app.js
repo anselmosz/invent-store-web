@@ -82,9 +82,9 @@ function exibirNotificacao(mensagem, status) {
 
 // verifica se o conteudo digitado contém simbolos
 function validarTexto(campo) {
-  const caracteres = /^[A-Za-zÀ-ÿ\s]+$/;
+  const regex = /^[A-Za-zÀ-ÿ\s]+$/;
 
-  return caracteres.test(campo.trim());
+  return regex.test(campo.trim());
 }
 
 let qtdCampos = 0; // contador dos campos (é usado na função abaixo para contabilizar a quantidade de campos preenchidos)
@@ -190,6 +190,8 @@ produtoForm.addEventListener("submit", (event) => {
   produtoForm.reset();
 
   exibirNotificacao("Produto inserido com sucesso!","sucesso");
+
+  location.reload(); // Recarrega a url de forma automática, sem necessidade de fazer isso manualmente
 });
 
 adicionarNaTabela();
