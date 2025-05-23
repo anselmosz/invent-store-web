@@ -12,7 +12,7 @@
 
 </div>
 
-> Este projeto foi desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas, o principal foco do projeto é realizar de maneira simples operações de CRUD no local storage do navegador utilizando objetos em formato JSON.
+> Este projeto foi desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas, o principal foco é realizar de maneira simples operações de CRUD no local storage do navegador, utilizando objetos em formato JSON para isso.
 
 ### [Link do projeto](https://invent-store-psi.vercel.app/)
 
