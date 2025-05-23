@@ -8,6 +8,7 @@ const produtoForm = document.getElementById("produto-form");
 const estoqueBaixo = document.getElementById("estoque-baixo-card");
 const totalProdutos = document.getElementById("total-produtos");
 const totalEstoque = document.getElementById("total-itens");
+const totalItensCard = document.getElementById("total-itens-card");
 const valorTotal = document.getElementById("valor-total");
 
 const tbody = document.getElementById("produtos-lista");
@@ -31,6 +32,9 @@ function adicionarDadosAoDashboard() {
 
   if (produtos.length > 0) {
     estoqueBaixo.style.display = 'none';
+  }
+  else {
+    totalItensCard.style.display = 'none';
   }
 
   // loop para adicionar valor aos cards do dashboard a medida que os produtos são cadastrados
@@ -59,7 +63,7 @@ function adicionarDadosAoDashboard() {
 function exibirNotificacao(mensagem, status) {
   const messageEl = document.getElementById("notificacao-msg");
 
-  // o textConte é responsável por alterar o texto guardado na variável
+  // o textContent é responsável por alterar o texto guardado na variável
   messageEl.textContent = mensagem;
   
   if (status === "sucesso") {
@@ -82,7 +86,7 @@ function exibirNotificacao(mensagem, status) {
 
 // verifica se o conteudo digitado contém simbolos
 function validarTexto(campo) {
-  const regex = /^[A-Za-zÀ-ÿ\s]+$/;
+  const regex = /^[A-Za-zÀ-ÿ\s\w]+$/;
 
   return regex.test(campo.trim());
 }
