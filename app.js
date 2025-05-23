@@ -125,8 +125,6 @@ function verificarCampos() {
     document.getElementById("erro-quantidade").style.display = 'none';
     qtdCampos += 1;
   }
-  
-  console.log(qtdCampos);
 
   return camposPreenchidos;
 }
@@ -144,7 +142,6 @@ function adicionarNaTabela() {
   }
 
   produtos.forEach(produto => {
-    console.log(produto);
     
     tbValores += `
       <tr>
@@ -169,7 +166,7 @@ produtoForm.addEventListener("submit", (event) => {
     exibirNotificacao("Nenhum produto adicionado! Preencha todos os campos","erro");
     return;
   } else if (verificarCampos() == false && qtdCampos < 4) {
-    exibirNotificacao("Faltam alguns campos a serem preenchidos","alerta")
+    exibirNotificacao("Faltam campos a serem preenchidos!","alerta")
     return;
   }
 
