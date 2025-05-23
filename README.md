@@ -28,10 +28,10 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Notificações
 - [x] Visualização de objetos cadastrados
 - [x] Refresh automático a cada nova adição
-- [ ] Responsividade
 - [ ] Alteração de dados nos objetos do local storage
 - [ ] Exclusão de objetos do local storage
 - [ ] Adição de imagens
+- [ ] Responsividade
 
 ## ⚙ Tecnologias usadas
 
