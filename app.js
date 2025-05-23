@@ -48,10 +48,10 @@ function adicionarDadosAoDashboard() {
     // multiplica o valor de preço pela quantidade, para retornar o valor total do estoque
     valorMultProduto = parseFloat(produto.preco) * parseInt(produto.quantidade);
 
+    // adiciona o valor total do estoque (pega o preço dos itens, os multiplica pela sua quantidade e adiciona ao campo)
     valorFinal += parseFloat(valorMultProduto);
     
-    // adiciona o valor total do estoque (pega o preço dos itens, os multiplica pela sua quantidade e adiciona ao campo)
-    valorTotal.textContent = `R$ ${valorFinal}`;
+    valorTotal.textContent = `R$ ${valorFinal.toFixed(2)}`; // adiciona o resultado final de 'valorFinal' ao conteúdo do card e formata com duas casas decimais
   });
 }
 
