@@ -4,10 +4,11 @@
 ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/invent-store-psi?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/anselmosz/invent-store?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/anselmosz/invent-store?style=for-the-badge)
+<!--
 ![GitHub forks](https://img.shields.io/github/forks/anselmosz/invent-store?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/anselmosz/invent-store?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/anselmosz/invent-store?style=for-the-badge)
-
+-->
 <img width="980" src="./images/inventstore-produtocadastrado.PNG" alt="Exemplo imagem">
 
 </div>
