@@ -80,6 +80,13 @@ function exibirNotificacao(mensagem, status) {
   }, 5000);
 }
 
+// verifica se o conteudo digitado contém simbolos
+function validarTexto(campo) {
+  const caracteres = /^[A-Za-zÀ-ÿ\s]+$/;
+
+  return caracteres.test(campo.trim());
+}
+
 let qtdCampos = 0; // contador dos campos (é usado na função abaixo para contabilizar a quantidade de campos preenchidos)
 
 // Funcão para validar se os campos de cadastro do formulário de produtos estão vazios
@@ -87,7 +94,7 @@ function verificarCampos() {
   qtdCampos = 0;
   let camposPreenchidos = true;
 
-  if (nome.value == "") {
+  if (nome.value == "" || !validarTexto(nome.value)) {
     document.getElementById("erro-nome").style.display = 'block';
     camposPreenchidos = false;
   } else {

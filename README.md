@@ -24,8 +24,10 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] Cadastro de produtos
 - [x] Validação de conteúdo nos inputs
+- [x] Tratamento simples de texto
 - [x] Notificações
 - [x] Visualização de objetos cadastrados
+- [ ] Refresh automático a cada nova adição
 - [ ] Adição de imagens
 - [ ] Alteração de dados nos objetos do local storage
 - [ ] Exclusão de objetos do local storage
