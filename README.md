@@ -9,9 +9,10 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/anselmosz/invent-store?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/anselmosz/invent-store?style=for-the-badge)
 -->
-<img width="980" src="./images/inventstore-produtocadastrado.PNG" alt="Exemplo imagem">
 
 </div>
+
+<img width="980" src="./images/inventstore-produtocadastrado.PNG" alt="Exemplo imagem">
 
 > Este projeto foi desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas, o principal foco é realizar de maneira simples operações de CRUD no local storage do navegador, utilizando objetos em formato JSON para isso.
 
