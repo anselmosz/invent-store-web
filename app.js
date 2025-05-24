@@ -12,6 +12,7 @@ const totalItensCard = document.getElementById("total-itens-card");
 const valorTotal = document.getElementById("valor-total");
 
 const tbody = document.getElementById("produtos-lista");
+const gerenciarBtn = document.getElementById("gerenciar");
 
 const notificacao = document.getElementById("notificacao-content");
 
@@ -140,9 +141,11 @@ function adicionarNaTabela() {
   let produtos = JSON.parse(localStorage.getItem("produtoInfo")) || [];
 
   let tbValores = '';
-
+  gerenciarBtn.style.display = 'none';
+  
   if (produtos.length > 0) {
     semProdutosDiv.style.display = 'none';
+    gerenciarBtn.style.display = 'flex';
   }
 
   produtos.forEach(produto => {

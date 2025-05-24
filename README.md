@@ -16,7 +16,7 @@
 
 > Este projeto foi desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas, o principal foco é realizar de maneira simples operações de CRUD no local storage do navegador, utilizando objetos em formato JSON para isso.
 
-### [Link do projeto](https://invent-store-psi.vercel.app/) - **! Projeto em manutenção !**
+### [Link do projeto](https://) - **! Projeto em manutenção !**
 
 ### Ajustes e melhorias
 
