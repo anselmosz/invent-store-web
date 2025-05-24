@@ -190,9 +190,9 @@ produtoForm.addEventListener("submit", (event) => {
   localStorage.setItem("produtoInfo", JSON.stringify(produtosSalvos));
   
   produtoForm.reset();
-
+  
   exibirNotificacao("Produto inserido com sucesso!","sucesso");
-
+  
   location.reload(); // Recarrega a url de forma automática, sem necessidade de fazer isso manualmente
 });
 
