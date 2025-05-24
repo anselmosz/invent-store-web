@@ -9,9 +9,7 @@
   --color4: #4361ee;
   --color5: #4cc9f0;
 }
-a {
-  text-decoration: none;
-}
+
 body {
   background-color: var(--color1);
   color: var(--color3);
@@ -152,7 +150,8 @@ input:focus, select:focus {
   box-shadow: 0 0 0 2px rgb(67, 97, 238, 0.2);
 }
 
-.btn {
+.btn-adicionar {
+  width: 100%;
   background-color: var(--color4);
   color: var(--color1);
   font-size: 1rem;
@@ -165,20 +164,13 @@ input:focus, select:focus {
   align-items: center;
   justify-content: center;
 }
-.btn:hover {
+.btn-adicionar:hover {
   background-color: #3a0ca3;
 }
-.btn i {
+.btn-adicionar i {
   margin-right: 0.5rem;
 }
 
-.adicionar {
-  width: 100%;
-}
-
-.gerenciar {
-  width: 250px;
-}
 
 .imagem-decorativa {
   background: linear-gradient(135deg, var(--color5), var(--color4));

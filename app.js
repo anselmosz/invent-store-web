@@ -141,11 +141,9 @@ function adicionarNaTabela() {
   let produtos = JSON.parse(localStorage.getItem("produtoInfo")) || [];
 
   let tbValores = '';
-  gerenciarBtn.style.display = 'none';
   
   if (produtos.length > 0) {
     semProdutosDiv.style.display = 'none';
-    gerenciarBtn.style.display = 'flex';
   }
 
   produtos.forEach(produto => {
